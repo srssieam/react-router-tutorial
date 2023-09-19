@@ -4,8 +4,11 @@
     color: white;
     padding: 30px 0;
 }
+.header-style h2{
+    margin-bottom: 20px;
+}
 .header-style a{
     color: aquamarine;
     font-weight: bold;
-    margin: 0 10px;
+    margin:10px;
 }
