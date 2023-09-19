@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './component/Home/Home';
-import Header from './component/Header/Header';
 import Contact from './component/Contact/Contact';
 import About from './component/About/About';
 import './index.css'
@@ -25,10 +24,6 @@ const router = createBrowserRouter([
         element: <Contact></Contact>
       }
     ]
-  },
-  {
-    path: 'header',
-    element: <Header></Header>
   }
 ])
 

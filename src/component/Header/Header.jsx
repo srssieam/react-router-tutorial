@@ -3,8 +3,8 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
-            <h2>Navbar</h2>
+        <div className='header-style'>
+            <h2>Welcome to my Website</h2>
             <nav>
                 {/* <a href="/">Home</a>
                 <a href="/about">About</a>
