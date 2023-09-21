@@ -6,6 +6,10 @@ import ErrorPage from "../component/Error page/ErrorPage";
 import Home from "../component/Home/Home";
 import UserDetails from "../component/UserDetails/UserDetails";
 import Users from "../component/Users/Users";
+import DashboardLayout from "../component/Dashboard layout/DashboardLayout";
+import Dashboard from "../component/Dashboard/Dashboard";
+import Profile from "../component/Profile/Profile";
+import EditProfile from "../component/Edit profile/EditProfile";
 
 
 const createdRoute = createBrowserRouter([
@@ -35,6 +39,23 @@ const createdRoute = createBrowserRouter([
           path: '/user/:userId',
           loader: ({params})=> fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
           element: <UserDetails></UserDetails>
+        },
+        {
+          path: '/dashboard',
+          element: <DashboardLayout></DashboardLayout>,
+          children:[{
+            path:'/dashboard',
+            element:<Dashboard></Dashboard>,
+            },
+            {
+              path:'/dashboard/profile',
+              element:<Profile></Profile>
+            },
+            {
+              path:'/dashboard/editprofile',
+              element:<EditProfile></EditProfile>
+            }
+          ]
         }
       ]
     }
